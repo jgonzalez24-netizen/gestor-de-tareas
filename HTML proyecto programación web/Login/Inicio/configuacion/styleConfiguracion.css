@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#eef2f7;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    background:white;
+    padding:25px;
+    border-right:1px solid #ddd;
+}
+
+.logo{
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar nav a{
+    text-decoration:none;
+    color:#555;
+    padding:12px;
+    border-radius:10px;
+}
+
+.sidebar nav a.active{
+    background:#e8f0ff;
+    color:#2563eb;
+}
+
+.semester{
+    margin-top:40px;
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+}
+
+.logout{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* CONTENT */
+
+.main-content{
+    padding:25px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    background:white;
+    padding:12px 20px;
+    border-radius:12px;
+}
+
+.welcome{
+    margin:20px 0;
+}
+
+.welcome h1{
+    font-size:32px;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+
+.stat h2{
+    margin-top:10px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:2fr 1.2fr;
+    grid-template-areas:
+        "tasks deliveries"
+        "subjects progress";
+    gap:15px;
+}
+
+.tasks{
+    grid-area:tasks;
+}
+
+.deliveries{
+    grid-area:deliveries;
+}
+
+.subjects{
+    grid-area:subjects;
+}
+
+.progress{
+    grid-area:progress;
+}
+
+.task{
+    margin-top:15px;
+}
+
+.badge{
+    background:#dbeafe;
+    color:#2563eb;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.delivery,
+.subject{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* BARRA */
+
+.progress-bar{
+    background:#e5e7eb;
+    height:8px;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.fill{
+    width:50%;
+    height:100%;
+    background:#2563eb;
+    border-radius:20px;
+}
+
+/* -- cambiar color del navegador --*/
+.sidebar nav a{
+    display:block;
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#555;
+    transition:0.3s;
+}
+
+.sidebar nav a:hover{
+    background:#f1f5f9;
+}
+
+.sidebar nav a.active{
+    background:#e8f0ff;
+    color:#2563eb;
+    font-weight:bold;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EduTask</title>
+    <link rel="stylesheet" href="styleClases.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">EduTask</h2>
+
+        <nav>
+            <a href="../inicio.html">Inicio</a>
+            <a class="active" href="#"> Clases</a>
+            <a href="../misTareas/misTareas.html">Mis tareas</a>
+            <a href="../configuacion/configuracion.html">Configuración</a>
+            <a href="../calendario/calendario.html">Calendario</a>
+            <a href="../progresoAcademico/progresoAcademico.html">Progreso académico</a>
+        </nav>
+
+        <div class="semester">
+            <strong>Semestre actual</strong>
+            <p>Agosto - Diciembre 2026</p>
+        </div>
+
+        <button class="logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <span>Miércoles 7 de octubre de 2026</span>
+            <span>Estudiante: Jesús Alberto</span>
+        </header>
+
+        <section class="page-header">
+            <div>
+                <h1>Mis tareas</h1>
+                <p>8 tareas registradas</p>
+            </div>
+
+            <button class="btn-primary">
+                Agregar tarea
+            </button>
+        </section>
+
+        <section class="tasks-grid">
+
+            <div class="task-card">
+                <h3>Consultas SQL</h3>
+
+                <p>Materia: Base de Datos</p>
+
+                <span class="priority alta">
+                    Prioridad Alta
+                </span>
+
+                <p>Entrega: 07 Oct 2026</p>
+
+                <div class="actions">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <h3>Subnetting</h3>
+
+                <p>Materia: Redes</p>
+
+                <span class="priority media">
+                    Prioridad Media
+                </span>
+
+                <p>Entrega: 09 Oct 2026</p>
+
+                <div class="actions">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="card weekly-summary">
+
+            <h3>Próximas entregas</h3>
+
+            <div class="week-grid">
+
+                <div class="day">
+                    <h4>Lunes</h4>
+                    <p>1 tarea</p>
+                </div>
+
+                <div class="day">
+                    <h4>Martes</h4>
+                    <p>2 tareas</p>
+                </div>
+
+                <div class="day">
+                    <h4>Miércoles</h4>
+                    <p>0 tareas</p>
+                </div>
+
+                <div class="day">
+                    <h4>Jueves</h4>
+                    <p>3 tareas</p>
+                </div>
+
+                <div class="day">
+                    <h4>Viernes</h4>
+                    <p>1 tarea</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+
+    
+</body>
+
+</html>
