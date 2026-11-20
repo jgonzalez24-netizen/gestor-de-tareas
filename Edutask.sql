@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS edutask;
 CREATE DATABASE IF NOT EXISTS edutask
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
@@ -87,13 +86,5 @@ CREATE TABLE recordatorio (
 
 -- Usuario de prueba 
 INSERT INTO usuario (nombres, apellidos, email, contrasena, activo)
-VALUES ('Jesus Alberto', 'Gonzalez Acevedo', 'jesus@gmail.com', '12345', TRUE);
+VALUES ('Jesus Alberto', 'Gonzalez Acevedo', 'jesus@gmail.com', '$2y$10$UgRA/UgmFp0tG0JqGEaPzOSEj7sntp1NGv9NRcPa8AYS2K56vWhwq', TRUE);
 
-SHOW TABLES;
-
-SELECT * FROM usuario;
-SELECT * FROM preferencia_usuario;
-SELECT * FROM materia;
-SELECT * FROM horario_clase;
-SELECT * FROM tarea;
-SELECT * FROM recordatorio;
