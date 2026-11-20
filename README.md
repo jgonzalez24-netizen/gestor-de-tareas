@@ -20,20 +20,16 @@ El diseño de la base de datos contempla las entidades `usuario`, `preferencia_u
 
 ## Instalación y Configuración Local
 
-1. Clonar o descargar este repositorio dentro de la carpeta `htdocs` de **XAMPP** con el nombre `tareas` (`C:\xampp\htdocs\tareas`).
+1. Clonar o descargar este repositorio dentro de la carpeta `htdocs` de XAMPP con el nombre `tareas` (`C:\xampp\htdocs\tareas`).
 2. Iniciar los servicios de **Apache** y **MySQL** en el panel de control de XAMPP.
 3. Abrir **MySQL Workbench** y conectarse al servidor local (`127.0.0.1` / `localhost`).
 4. Abrir y ejecutar el archivo `Edutask.sql` para crear la base de datos, las tablas y el usuario de prueba.
-5. Abrir el navegador e ingresar a `http://localhost/tareas/`.
-
----
-
-## Credenciales de Prueba (Login)
-
-Para probar el inicio de sesión y la navegación del sistema sin necesidad de crear una cuenta nueva:
-
-* **Correo electrónico:** `jesus@gmail.com`
-* **Contraseña:** `12345`
+5. Abrir el archivo `HTML proyecto programación web/Login/conexion.php` y verificar que los datos de conexión coincidan con tu servidor local (en XAMPP por defecto el usuario es `root` y la contraseña va vacía `""`).
+6. Abrir el navegador e ingresar directamente al inicio de sesión en:  
+   `http://localhost/tareas/HTML%20proyecto%20programaci%C3%B3n%20web/Login/Login.html`
+7. Iniciar sesión con el usuario de prueba:
+   * **Correo:** `jesus@gmail.com`
+   * **Contraseña:** `12345`
 
 ---
 
