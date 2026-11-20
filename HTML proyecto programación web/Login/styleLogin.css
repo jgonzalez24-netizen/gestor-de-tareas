@@ -1,133 +1,165 @@
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#f5f7fb;
-}
-
-.container{
-    display:grid;
-    grid-template-columns:260px 1fr;
+    background:#eef1f5;
     min-height:100vh;
-}
-
-/* Sidebar */
-
-.sidebar{
-    background:white;
-    padding:25px;
-    border-right:1px solid #ddd;
-}
-
-.logo{
-    color:#3366ff;
-    margin-bottom:30px;
-}
-
-nav{
     display:flex;
-    flex-direction:column;
-    gap:10px;
+    justify-content:center;
+    align-items:flex-start;
 }
 
-nav a{
-    padding:12px;
-    border-radius:8px;
-    cursor:pointer;
+/* CONTENEDOR */
+.login-container{
+    margin-top:60px;
+    text-align:center;
 }
 
-nav a:hover{
-    background:#eef3ff;
+/* LOGO */
+.logo-section h1{
+    color:#2456e8;
+    font-size:22px;
+    font-weight:700;
 }
 
-.active{
-    background:#eef3ff;
-    color:#3366ff;
-    font-weight:bold;
+.logo-section p{
+    margin-top:4px;
+    color:#888;
+    font-size:12px;
 }
 
-.semester{
-    margin-top:40px;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:12px;
-}
-
-/* Main */
-
-.content{
-    padding:25px;
-}
-
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:20px;
-    color:#777;
-}
-
-/* Stats */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin:20px 0;
-}
-
+/* TARJETA */
 .card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
+    width:430px;
+    background:#fff;
+    margin-top:20px;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+    text-align:left;
 }
 
 .card h2{
-    margin-top:10px;
+    text-align:center;
+    font-size:28px;
+    color:#222;
+    margin-bottom:8px;
 }
 
-/* Dashboard */
-
-.dashboard{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:20px;
+.subtitle{
+    text-align:center;
+    color:#777;
+    font-size:14px;
+    margin-bottom:28px;
 }
 
-.box{
-    background:white;
-    border-radius:12px;
-    padding:20px;
+/* FORM */
+form label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#333;
 }
 
-.materias{
-    margin-top:20px;
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    outline:none;
+    font-size:14px;
+    margin-bottom:18px;
 }
 
-.progress-bar{
-    height:10px;
-    background:#ddd;
-    border-radius:50px;
-    margin:15px 0;
+input:focus{
+    border-color:#2456e8;
 }
 
-.progress{
-    width:50%;
-    height:100%;
-    background:#3366ff;
-    border-radius:50px;
+/* PASSWORD */
+.password-box{
+    position:relative;
 }
 
-.task,
-.mini-task{
+.password-box button{
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:none;
+    border:none;
+    color:#6d6d6d;
+    cursor:pointer;
+    font-size:13px;
+}
+
+/* OPCIONES */
+.options{
     display:flex;
     justify-content:space-between;
-    margin:15px 0;
+    align-items:center;
+    margin-bottom:20px;
+    font-size:13px;
 }
 
-span{
-    font-size:.8rem;
+.options label{
+    margin:0;
+    font-weight:normal;
+    color:#666;
+}
+
+.options a{
+    color:#2456e8;
+    text-decoration:none;
+}
+
+/* BOTÓN */
+.login-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:6px;
+    background:#2456e8;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#1d49c7;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #eee;
+    margin:25px 0;
+}
+
+/* REGISTRO */
+.register{
+    text-align:center;
+    font-size:13px;
+    color:#666;
+}
+
+.register a{
+    color:#2456e8;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.login-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#2456e8;
+    color:white;
+    padding:13px;
+    border-radius:6px;
 }

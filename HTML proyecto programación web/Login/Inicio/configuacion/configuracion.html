@@ -1,126 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>EduTask</title>
-    <link rel="stylesheet" href="styleConfiguracion.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduTask - Configuración</title>
+
+
+<link rel="stylesheet" href="styleConfiguracion.css">
 </head>
+
 <body>
 
-<div class="container">
+<div class="layout">
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
+
     <aside class="sidebar">
-        <h2 class="logo">EduTask</h2>
+
+        <div class="logo">
+            <h2>EduTask</h2>
+            <span>Planificación académica</span>
+        </div>
 
         <nav>
             <a href="../inicio.html">Inicio</a>
             <a href="../clases/clases.html"> Clases</a>
             <a href="../misTareas/misTareas.html">Mis tareas</a>
-            <a class="active" href="#">Configuración</a>
+            <a class="active">Configuración</a>
             <a href="../calendario/calendario.html">Calendario</a>
             <a href="../progresoAcademico/progresoAcademico.html">Progreso académico</a>
         </nav>
 
         <div class="semester">
-            <strong>Semestre actual</strong>
-            <p>Agosto - Diciembre 2026</p>
+            <h4>Semestre actual</h4>
+            <p>Agosto - diciembre 2026</p>
+            <span>4 materias</span>
         </div>
 
-        <button class="logout">Cerrar sesión</button>
+        <button class="logout">
+            Cerrar sesión
+        </button>
+
     </aside>
 
-    <!-- Main -->
-    <main class="main-content">
+    <!-- CONTENIDO -->
+
+    <main class="content">
 
         <header class="topbar">
             <span>Miércoles 7 de octubre de 2026</span>
-            <span><strong>Estudiante:</strong> Jesús Alberto</span>
+            <strong>Estudiante: Jesus Alberto</strong>
         </header>
 
-        <section class="welcome">
-            <h1>Hola, Jesus</h1>
-            <p>Este es el resumen de tu planificación académica para hoy.</p>
+        <section class="page-header">
+            <h1>Configuración</h1>
+            <p>Organiza tus tiempos y avisos de estudio.</p>
         </section>
 
-        <section class="stats">
-            <div class="card stat">
-                <p>Tareas registradas</p>
-                <h2>8</h2>
+        <section class="settings-grid">
+
+            <!-- Horarios -->
+
+            <div class="card">
+
+                <h3>Horarios de estudio</h3>
+
+                <label class="section-label">
+                    Horario habitual fuera de tus horas de clase.
+                </label>
+
+                <div class="days">
+                    <button class="day active">Lun</button>
+                    <button class="day active">Mar</button>
+                    <button class="day active">Mié</button>
+                    <button class="day active">Jue</button>
+                    <button class="day active">Vie</button>
+                    <button class="day">Sáb</button>
+                    <button class="day">Dom</button>
+                </div>
+
+                <div class="row">
+
+                    <div>
+                        <label>Hora de inicio</label>
+
+                        <select>
+                            <option>18:00</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Hora de fin</label>
+
+                        <select>
+                            <option>20:00</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <small>
+                    Lunes a viernes · 2 horas al día · 10 horas semanales
+                </small>
+
             </div>
 
-            <div class="card stat">
-                <p>Completadas</p>
-                <h2>4</h2>
+            <!-- Recordatorios -->
+
+            <div class="card">
+
+                <h3>Recordatorios</h3>
+
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    Recordar las fechas de entrega
+                </label>
+
+                <small>
+                    Recibir un aviso antes del vencimiento de una tarea.
+                </small>
+
+                <label class="input-label">
+                    Anticipación del aviso
+                </label>
+
+                <select>
+                    <option>1 día antes</option>
+                    <option>2 días antes</option>
+                    <option>3 días antes</option>
+                </select>
+
+                <label class="checkbox mt">
+                    <input type="checkbox" checked>
+                    Recordar el inicio del estudio
+                </label>
+
+                <small>
+                    Aviso diario a las 18:00 de lunes a viernes.
+                </small>
+
             </div>
 
-            <div class="card stat">
-                <p>Por completar</p>
-                <h2>4</h2>
+            <!-- Notificaciones -->
+
+            <div class="card">
+
+                <h3>Notificaciones</h3>
+
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    Avisos dentro de EduTask
+                </label>
+
+                <small>
+                    Mostrar recordatorios al consultar tu planificación.
+                </small>
+
+                <label class="checkbox mt">
+                    <input type="checkbox">
+                    Notificaciones por correo
+                </label>
+
+                <small>
+                    Enviar recordatorios al correo de tu cuenta.
+                </small>
+
+                <label class="checkbox mt">
+                    <input type="checkbox" checked>
+                    Resumen diario de tareas
+                </label>
+
+                <small>
+                    Mostrar las tareas del día en el inicio.
+                </small>
+
             </div>
 
-            <div class="card stat">
-                <p>Progreso general</p>
-                <h2>50%</h2>
+            <!-- Preferencias -->
+
+            <div class="card">
+
+                <h3>Preferencias</h3>
+
+                <label>Inicio de la semana</label>
+
+                <select>
+                    <option>Lunes</option>
+                </select>
+
+                <label>Vista predeterminada del calendario</label>
+
+                <select>
+                    <option>Mensual</option>
+                </select>
+
+                <label>Formato de hora</label>
+
+                <select>
+                    <option>24 horas</option>
+                </select>
+
             </div>
+
         </section>
 
-        <section class="dashboard">
+        <footer class="actions">
 
-            <div class="card tasks">
-                <h3>Tareas del día</h3>
+            <span>
+                Los cambios se aplican a tu planificación académica.
+            </span>
 
-                <div class="task">
-                    <h4>Consultas SQL</h4>
-                    <span class="badge">En curso</span>
-                    <p>Prioridad alta - Finaliza y revisa tus consultas.</p>
-                </div>
+            <div>
+                <button class="btn-secondary">
+                    Cancelar
+                </button>
+
+                <button class="btn-primary">
+                    Guardar cambios
+                </button>
             </div>
 
-            <div class="card deliveries">
-                <h3>Próximas entregas</h3>
-
-                <div class="delivery">
-                    <strong>Práctica de subnetting</strong>
-                    <span>Pendiente</span>
-                </div>
-
-                <div class="delivery">
-                    <strong>Ejercicios de recursión</strong>
-                    <span>En curso</span>
-                </div>
-            </div>
-
-            <div class="card subjects">
-                <h3>Mis materias</h3>
-
-                <div class="subject">
-                    <span>Base de Datos</span>
-                    <span>1 tarea</span>
-                </div>
-
-                <div class="subject">
-                    <span>Redes</span>
-                    <span>1 tarea</span>
-                </div>
-
-                <div class="subject">
-                    <span>Programación</span>
-                    <span>1 tarea</span>
-                </div>
-            </div>
-
-            <div class="card progress">
-                <h3>Progreso académico</h3>
-
-                <h2>50%</h2>
-
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-
-        </section>
+        </footer>
 
     </main>
 

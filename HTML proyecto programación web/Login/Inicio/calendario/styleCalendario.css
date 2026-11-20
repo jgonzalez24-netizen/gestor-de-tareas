@@ -2,89 +2,147 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#eef2f7;
+    background:#f4f7fb;
 }
 
-.container{
-    display:grid;
-    grid-template-columns:240px 1fr;
+/* Layout */
+
+.layout{
+    display:flex;
     min-height:100vh;
 }
 
-/* SIDEBAR */
+/* Sidebar */
 
 .sidebar{
+    width:250px;
     background:white;
-    padding:25px;
-    border-right:1px solid #ddd;
-}
-
-.logo{
-    color:#2563eb;
-    margin-bottom:30px;
-}
-
-.sidebar nav{
+    border-right:1px solid #e7e9ef;
+    padding:24px 18px;
     display:flex;
     flex-direction:column;
-    gap:10px;
 }
 
-.sidebar nav a{
+.logo h2{
+    color:#2d5bff;
+}
+
+.logo span{
+    font-size:12px;
+    color:#8892a5;
+}
+
+nav{
+    margin-top:40px;
+}
+
+nav a{
+    display:block;
     text-decoration:none;
-    color:#555;
-    padding:12px;
-    border-radius:10px;
+    color:#4a5568;
+    padding:12px 14px;
+    border-radius:8px;
+    margin-bottom:4px;
 }
 
-.sidebar nav a.active{
-    background:#e8f0ff;
-    color:#2563eb;
+nav a.active{
+    background:#eef4ff;
+    color:#2d5bff;
+    font-weight:600;
 }
 
 .semester{
     margin-top:40px;
-    background:#f8fafc;
-    padding:15px;
+    background:#f7f8fb;
     border-radius:10px;
+    padding:15px;
+}
+
+.semester h4{
+    margin-bottom:6px;
 }
 
 .logout{
-    margin-top:20px;
-    width:100%;
-    padding:12px;
+    margin-top:auto;
     border:none;
-    border-radius:10px;
+    background:none;
+    text-align:left;
+    color:#5f6c81;
     cursor:pointer;
 }
 
-/* CONTENT */
+/* Main */
 
-.main-content{
-    padding:25px;
+.content{
+    flex:1;
+    padding:20px;
 }
 
 .topbar{
+    background:white;
+    padding:14px 22px;
+    border-radius:10px;
     display:flex;
     justify-content:space-between;
+    margin-bottom:24px;
+}
+
+.page-title h1{
+    font-size:36px;
+}
+
+.page-title p{
+    color:#9299a8;
+    margin-top:5px;
+}
+
+/* Controls */
+
+.calendar-controls{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:25px 0;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.circle{
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:50%;
     background:white;
-    padding:12px 20px;
-    border-radius:12px;
 }
 
-.welcome{
-    margin:20px 0;
+.today{
+    border:none;
+    background:white;
+    padding:8px 15px;
+    border-radius:8px;
 }
 
-.welcome h1{
-    font-size:32px;
+.right button{
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    background:white;
 }
 
-/* STATS */
+.active-view{
+    background:#2d5bff !important;
+    color:white;
+}
+
+/* Stats */
 
 .stats{
     display:grid;
@@ -95,94 +153,85 @@ body{
 
 .card{
     background:white;
-    border-radius:14px;
+    border-radius:12px;
     padding:18px;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);
+    border:1px solid #e5e7ec;
 }
 
-.stat h2{
-    margin-top:10px;
+.card span{
+    color:#97a0af;
+    font-size:13px;
 }
 
-/* DASHBOARD */
-
-.dashboard{
-    display:grid;
-    grid-template-columns:2fr 1.2fr;
-    grid-template-areas:
-        "tasks deliveries"
-        "subjects progress";
-    gap:15px;
-}
-
-.tasks{
-    grid-area:tasks;
-}
-
-.deliveries{
-    grid-area:deliveries;
-}
-
-.subjects{
-    grid-area:subjects;
+.card h2{
+    margin-top:8px;
 }
 
 .progress{
-    grid-area:progress;
+    grid-column:span 1;
+}
+
+/* Calendar */
+
+.calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    background:white;
+    border:1px solid #e7e9ef;
+}
+
+.weekday{
+    background:#f8fafc;
+    padding:10px;
+    font-weight:600;
+    border:1px solid #e7e9ef;
+}
+
+.day{
+    min-height:110px;
+    border:1px solid #e7e9ef;
+    padding:8px;
+}
+
+.number{
+    font-size:14px;
+    font-weight:600;
+}
+
+.muted{
+    color:#b7bfce;
+}
+
+.active-day{
+    background:#f6f9ff;
 }
 
 .task{
-    margin-top:15px;
+    margin-top:8px;
+    background:#eef4ff;
+    color:#2d5bff;
+    border-radius:7px;
+    padding:6px;
+    font-size:11px;
+    font-weight:600;
 }
 
-.badge{
-    background:#dbeafe;
-    color:#2563eb;
-    padding:4px 10px;
-    border-radius:20px;
-    font-size:12px;
-}
+/* Footer */
 
-.delivery,
-.subject{
+.pending{
+    margin-top:20px;
+    background:white;
+    border-radius:12px;
+    border:1px solid #e5e7ec;
+    padding:16px 20px;
+
     display:flex;
     justify-content:space-between;
-    padding:10px 0;
-    border-bottom:1px solid #eee;
+    align-items:center;
 }
 
-/* BARRA */
-
-.progress-bar{
-    background:#e5e7eb;
-    height:8px;
-    border-radius:20px;
-    margin-top:15px;
-}
-
-.fill{
-    width:50%;
-    height:100%;
-    background:#2563eb;
-    border-radius:20px;
-}
-
-/* -- cambiar color del navegador --*/
-.sidebar nav a{
-    display:block;
-    padding:12px;
-    border-radius:10px;
-    text-decoration:none;
-    color:#555;
-    transition:0.3s;
-}
-
-.sidebar nav a:hover{
-    background:#f1f5f9;
-}
-
-.sidebar nav a.active{
-    background:#e8f0ff;
-    color:#2563eb;
-    font-weight:bold;
+.pending p{
+    margin-top:5px;
+    color:#69768d;
+    font-size:13px;
 }

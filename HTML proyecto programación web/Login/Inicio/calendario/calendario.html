@@ -1,165 +1,225 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>EduTask</title>
-    <link rel="stylesheet" href="styleCalendario.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduTask - Calendario</title>
+<link rel="stylesheet" href="styleCalendario.css">
+
 <body>
 
-<div class="container">
+<div class="layout">
 
     <!-- Sidebar -->
     <aside class="sidebar">
-        <h2 class="logo">EduTask</h2>
 
+        <div class="logo">
+            <h2>EduTask</h2>
+            <span>Planificación académica</span>
+        </div>
+        
         <nav>
+
             <a href="../inicio.html">Inicio</a>
             <a href="../clases/clases.html"> Clases</a>
             <a href="../misTareas/misTareas.html">Mis tareas</a>
             <a href="../configuacion/configuracion.html">Configuración</a>
-            <a class="active" href="#">Calendario</a>
+            <a class="active" href="#"">Calendario</a>
             <a href="../progresoAcademico/progresoAcademico.html">Progreso académico</a>
         </nav>
+            
 
         <div class="semester">
-            <strong>Semestre actual</strong>
-            <p>Agosto - Diciembre 2026</p>
+            <h4>Semestre actual</h4>
+            <p>Agosto-diciembre 2026</p>
+            <span>4 materias</span>
         </div>
 
-        <button class="logout">Cerrar sesión</button>
+        <button class="logout">
+            Cerrar sesión
+        </button>
+
     </aside>
 
-    <!-- Main -->
-    <main class="main-content">
+    <!-- Contenido -->
+    <main class="content">
 
         <header class="topbar">
             <span>Miércoles 7 de octubre de 2026</span>
-            <span><strong>Estudiante:</strong> Jesús Alberto</span>
+            <strong>Estudiante: Jesus Alberto</strong>
         </header>
 
-        <main class="main-content">
-
-    <section class="page-header">
-
-        <div>
+        <section class="page-title">
             <h1>Calendario</h1>
             <p>
-                Fechas de entrega de las 8 tareas registradas
+                Fechas de entrega de las tareas registradas · Octubre de 2026
             </p>
-        </div>
+        </section>
 
-    </section>
+        <!-- Controles -->
+        <section class="calendar-controls">
 
-    <!-- Navegación mes -->
-    <section class="calendar-controls">
+            <div class="left">
+                <button class="circle">&lt;</button>
+                <h2>Octubre de 2026</h2>
+                <button class="circle">&gt;</button>
 
-        <button>&lt;</button>
+                <button class="today">
+                    Hoy
+                </button>
+            </div>
 
-        <h2>Octubre 2026</h2>
+            <div class="right">
+                <button class="active-view">Mes</button>
+                <button>Semana</button>
+            </div>
 
-        <button>&gt;</button>
+        </section>
 
-        <button>Hoy</button>
+        <!-- KPIs -->
+        <section class="stats">
 
-        <div class="view-buttons">
-            <button class="active">Mes</button>
-            <button>Semana</button>
-        </div>
+            <div class="card">
+                <span>Tareas registradas</span>
+                <h2>8</h2>
+            </div>
 
-    </section>
+            <div class="card">
+                <span>Completadas</span>
+                <h2>4</h2>
+            </div>
 
-    <!-- Estadísticas -->
-    <section class="stats">
+            <div class="card">
+                <span>Por completar</span>
+                <h2>4</h2>
+            </div>
 
-        <div class="card">
-            <p>Tareas registradas</p>
-            <h2>8</h2>
-        </div>
+            <div class="card progress">
+                <span>Progreso general</span>
+                <h2>50%</h2>
+            </div>
 
-        <div class="card">
-            <p>Completadas</p>
-            <h2>4</h2>
-        </div>
+        </section>
 
-        <div class="card">
-            <p>Por completar</p>
-            <h2>4</h2>
-        </div>
+        <!-- Calendario -->
+        <section class="calendar">
 
-        <div class="card">
-            <p>Progreso general</p>
-            <h2>50%</h2>
-        </div>
+            <div class="weekday">Lunes</div>
+            <div class="weekday">Martes</div>
+            <div class="weekday">Miércoles</div>
+            <div class="weekday">Jueves</div>
+            <div class="weekday">Viernes</div>
+            <div class="weekday">Sábado</div>
+            <div class="weekday">Domingo</div>
 
-    </section>
+            <!-- Semana 1 -->
 
-    <!-- Calendario -->
-    <section class="calendar-container">
-
-        <!-- Cabecera días -->
-        <div class="calendar-header">
-            <div>Lunes</div>
-            <div>Martes</div>
-            <div>Miércoles</div>
-            <div>Jueves</div>
-            <div>Viernes</div>
-            <div>Sábado</div>
-            <div>Domingo</div>
-        </div>
-
-        <!-- Días -->
-        <div class="calendar-grid">
-
-            <div class="day"></div>
+            <div class="day muted">28</div>
+            <div class="day muted">29</div>
+            <div class="day muted">30</div>
 
             <div class="day">
-                <span>1</span>
+                <span class="number">1</span>
+
+                <div class="task">
+                    Alfabetos y lenguajes
+                </div>
             </div>
 
             <div class="day">
-                <span>2</span>
+                <span class="number">2</span>
+
+                <div class="task">
+                    Práctica de funciones
+                </div>
             </div>
 
-            <div class="day task-day">
+            <div class="day">
+                <span class="number">3</span>
+            </div>
 
-                <span>7</span>
+            <div class="day">
+                <span class="number">4</span>
+            </div>
 
-                <div class="event blue">
+            <!-- Semana 2 -->
+
+            <div class="day">
+                <span class="number">5</span>
+
+                <div class="task">
+                    Modelo entidad-relación
+                </div>
+            </div>
+
+            <div class="day">
+                <span class="number">6</span>
+
+                <div class="task">
+                    Modelo OSI
+                </div>
+            </div>
+
+            <div class="day active-day">
+                <span class="number">7</span>
+
+                <div class="task">
                     Consultas SQL
                 </div>
-
             </div>
 
-            <div class="day task-day">
+            <div class="day"><span class="number">8</span></div>
+            <div class="day"><span class="number">9</span></div>
+            <div class="day"><span class="number">10</span></div>
+            <div class="day"><span class="number">11</span></div>
 
-                <span>8</span>
+            <!-- resto del mes -->
 
-                <div class="event red">
-                    Práctica subnetting
-                </div>
+            <div class="day"><span class="number">12</span></div>
+            <div class="day"><span class="number">13</span></div>
+            <div class="day"><span class="number">14</span></div>
+            <div class="day"><span class="number">15</span></div>
+            <div class="day"><span class="number">16</span></div>
+            <div class="day"><span class="number">17</span></div>
+            <div class="day"><span class="number">18</span></div>
 
+            <div class="day"><span class="number">19</span></div>
+            <div class="day"><span class="number">20</span></div>
+            <div class="day"><span class="number">21</span></div>
+            <div class="day"><span class="number">22</span></div>
+            <div class="day"><span class="number">23</span></div>
+            <div class="day"><span class="number">24</span></div>
+            <div class="day"><span class="number">25</span></div>
+
+            <div class="day"><span class="number">26</span></div>
+            <div class="day"><span class="number">27</span></div>
+            <div class="day"><span class="number">28</span></div>
+            <div class="day"><span class="number">29</span></div>
+            <div class="day"><span class="number">30</span></div>
+            <div class="day"><span class="number">31</span></div>
+            <div class="day muted">1</div>
+
+        </section>
+
+        <!-- Footer -->
+        <section class="pending">
+
+            <div>
+                <strong>Hoy: Consultas SQL - Base de Datos</strong>
+                <p>
+                    Próximas entregas:
+                    08 oct · Práctica de subnetting |
+                    12 oct · Ejercicios de recursión |
+                    14 oct · Autómatas finitos
+                </p>
             </div>
 
-        </div>
+            <span>07 oct · 23:59 · En curso</span>
 
-    </section>
+        </section>
 
-    <!-- Resumen inferior -->
-    <section class="card summary-bar">
-
-        <div>
-            <strong>Hoy:</strong>
-            Consultas SQL
-        </div>
-
-        <div>
-            07 oct · 23:59 · En curso
-        </div>
-
-    </section>
-
-</main>
+    </main>
 
 </div>
 
