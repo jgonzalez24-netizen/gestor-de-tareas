@@ -84,7 +84,18 @@ CREATE TABLE recordatorio (
         ON DELETE CASCADE
 );
 
--- Usuario de prueba 
+CREATE TABLE recuperacion_contrasena (
+    id_recuperacion INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    token VARCHAR(255) NOT NULL UNIQUE,
+    fecha_expiracion DATETIME NOT NULL,
+    usado BOOLEAN NOT NULL DEFAULT FALSE,
+    fecha_creacion DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario)
+        REFERENCES usuario(id_usuario)
+        ON DELETE CASCADE
+);
+
+-- Usuario de prueba (contraseña: 12345)
 INSERT INTO usuario (nombres, apellidos, email, contrasena, activo)
 VALUES ('Jesus Alberto', 'Gonzalez Acevedo', 'jesus@gmail.com', '$2y$10$UgRA/UgmFp0tG0JqGEaPzOSEj7sntp1NGv9NRcPa8AYS2K56vWhwq', TRUE);
-
