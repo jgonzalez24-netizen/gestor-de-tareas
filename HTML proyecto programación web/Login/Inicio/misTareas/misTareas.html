@@ -45,17 +45,26 @@
                     <input type="text" placeholder="Buscar por nombre o descripción">
 
                     <div class="filters-row">
-                        <select>
-                            <option>Todas</option>
-                        </select>
+                        <div class="filter-group">
+                            <label>Materia</label>
+                            <select>
+                                <option>Todas</option>
+                            </select>
+                        </div>
 
-                        <select>
-                            <option>Todas</option>
-                        </select>
+                        <div class="filter-group">
+                            <label>Prioridad</label>
+                            <select>
+                                <option>Todas</option>
+                            </select>
+                        </div>
 
-                        <select>
-                            <option>Octubre 2026</option>
-                        </select>
+                        <div class="filter-group">
+                            <label>Fecha</label>
+                            <select>
+                                <option>Octubre 2026</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -80,33 +89,62 @@
                     <h3>Crear o editar tarea</h3>
 
                     <form>
-                        <input placeholder="Nombre">
-
-                        <textarea placeholder="Descripción"></textarea>
-
-                        <select>
-                            <option>Base de Datos</option>
-                        </select>
-
-                        <div class="double-field">
-                            <input type="date">
-                            <input type="time">
+                        <div class="form-group">
+                            <label>Nombre *</label>
+                            <input type="text" placeholder="Ej. Consultas SQL">
                         </div>
 
-                        <div class="double-field">
-                            <select>
-                                <option>Alta</option>
-                            </select>
+                        <div class="form-group">
+                            <label>Descripción *</label>
+                            <textarea placeholder="Describe los detalles de la tarea"></textarea>
+                        </div>
 
+                        <div class="form-group">
+                            <label>Materia *</label>
                             <select>
-                                <option>En curso</option>
+                                <option>Base de Datos</option>
                             </select>
                         </div>
 
-                        <input placeholder="Recordatorio">
+                        <div class="double-field">
+                            <div class="form-group">
+                                <label>Fecha de entrega *</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Hora de entrega *</label>
+                                <input type="time">
+                            </div>
+                        </div>
+
+                        <div class="double-field">
+                            <div class="form-group">
+                                <label>Prioridad *</label>
+                                <select>
+                                    <option>Alta</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Estado *</label>
+                                <select>
+                                    <option>En curso</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Recordatorio *</label>
+                            <select>
+                                <option>Sin recordatorio</option>
+                                <option>1 hora antes</option>
+                                <option>1 día antes</option>
+                            </select>
+                        </div>
 
                         <div class="form-buttons">
-                            <button type="button">Cancelar</button>
+                            <button type="button" class="btn-secondary">Cancelar</button>
                             <button type="submit" class="btn-primary">Guardar tarea</button>
                         </div>
                     </form>
