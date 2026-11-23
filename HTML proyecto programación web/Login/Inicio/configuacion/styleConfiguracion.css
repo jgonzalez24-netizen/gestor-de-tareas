@@ -258,10 +258,10 @@ small{
 }
 
 .btn-secondary{
-    background:#f3f4f8;
-    color:#667085;
+    background:#fff;
+    border:1px solid #d9dfea;
+    color:#374151;
 }
-
 .btn-primary{
     background:#2d5cff;
     color:white;
