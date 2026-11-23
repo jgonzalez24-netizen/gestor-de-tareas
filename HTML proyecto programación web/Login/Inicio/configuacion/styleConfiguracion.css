@@ -188,7 +188,7 @@ label{
     display:block;
     margin-bottom:6px;
     font-size:13px;
-    font-weight:500;
+    font-weight:600;
 }
 
 select{
@@ -205,6 +205,10 @@ small{
     color:#8f98a8;
     margin-top:8px;
     font-size:12px;
+}
+
+.checkbox + small{
+    padding-left:22px;
 }
 
 /* Checkboxes */
