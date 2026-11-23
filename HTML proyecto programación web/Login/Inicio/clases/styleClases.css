@@ -231,3 +231,86 @@ body{
     font-size:13px;
     margin-bottom:5px;
 }
+
+/* Encabezado, boton Agregar materia y botones Editar/Eliminar */
+.logout{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#f1f5f9;
+    color:#374151;
+    font-size:14px;
+}
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0;
+}
+
+.page-header h1{
+    font-size:28px;
+    color:#1f2937;
+    margin-bottom:4px;
+}
+
+.page-header p{
+    font-size:13px;
+    color:#6b7280;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:#ffffff;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.subject-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.task-card h3{
+    font-size:17px;
+    color:#1f2937;
+}
+
+.task-card p{
+    font-size:13px;
+    color:#4b5563;
+    margin-bottom:6px;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    margin-top:16px;
+}
+
+.actions button{
+    flex:1;
+    padding:9px 12px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    background:#ffffff;
+}
+
+.btn-edit{
+    color:#2563eb;
+    border:1px solid #bfdbfe;
+}
+
+.btn-delete{
+    color:#dc2626;
+    border:1px solid #fecaca;
+}
