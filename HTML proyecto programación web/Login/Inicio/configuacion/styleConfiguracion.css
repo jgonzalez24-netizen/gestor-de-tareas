@@ -76,12 +76,21 @@ nav a.active{
 }
 
 .logout{
+    display:block;
     margin-top:auto;
-    background:none;
-    border:none;
-    text-align:left;
-    color:#687487;
+    width:100%;
+    padding:12px;
+    background:#f1f5f9;
+    color:#333;
+    text-decoration:none;
+    text-align:center;
+    border-radius:10px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.logout:hover{
+    background:#e2e8f0;
 }
 
 /* Main */
