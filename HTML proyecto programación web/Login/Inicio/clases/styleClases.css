@@ -314,3 +314,44 @@ body{
     color:#dc2626;
     border:1px solid #fecaca;
 }
+
+/* Estilos del bloque Horario semanal */
+.weekly-summary h3{
+    font-size:17px;
+    color:#1f2937;
+}
+
+.day{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.day h4{
+    color:#1f2937;
+    padding-bottom:6px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.schedule-item{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-left:3px solid #2563eb;
+    border-radius:8px;
+    padding:8px 10px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+.schedule-time{
+    font-size:11px;
+    color:#6b7280;
+    font-weight:600;
+}
+
+.schedule-subject{
+    font-size:13px;
+    color:#1f2937;
+    font-weight:600;
+}
