@@ -15,7 +15,7 @@
 
         <nav>
             <a href="../inicio.html">Inicio</a>
-            <a href="../clases/clases.html"> Clases</a>
+            <a href="../clases/clases.html">Clases</a>
             <a class="active" href="#">Mis tareas</a>
             <a href="../configuacion/configuracion.html">Configuración</a>
             <a href="../calendario/calendario.html">Calendario</a>
@@ -33,131 +33,87 @@
     <!-- Main -->
     <main class="main-content">
 
-            <header class="topbar">
-                <span>Miércoles 7 de octubre de 2026</span>
-                <span><strong>Estudiante:</strong> Jesús Alberto</span>
-            </header>
+        <header class="topbar">
+            <span>Miércoles 7 de octubre de 2026</span>
+            <span><strong>Estudiante:</strong> Jesús Alberto</span>
+        </header>
 
-            <section class="tasks-layout">
+        <section class="tasks-layout">
 
-                <div class="tasks-left">
-                    <!-- filtros + lista -->
+            <div class="tasks-left">
+                <div class="card filters">
+                    <input type="text" placeholder="Buscar por nombre o descripción">
+
+                    <div class="filters-row">
+                        <select>
+                            <option>Todas</option>
+                        </select>
+
+                        <select>
+                            <option>Todas</option>
+                        </select>
+
+                        <select>
+                            <option>Octubre 2026</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="tasks-right">
-                    <!-- formulario -->
+                <div class="task-item">
+                    <div class="task-info">
+                        <input type="checkbox">
+                        <div>
+                            <h4>Consultas SQL</h4>
+                            <p>Base de Datos</p>
+                        </div>
+                    </div>
+
+                    <div class="task-actions">
+                        <a href="#">Editar</a>
+                        <a href="#">Eliminar</a>
+                    </div>
                 </div>
-
-            </section>
-
-        
-        <div class="card filters">
-
-            <input
-                type="text"
-                placeholder="Buscar por nombre o descripción">
-
-                <div class="filters-row">
-
-                    <select>
-                        <option>Todas</option>
-                    </select>
-
-                    <select>
-                        <option>Todas</option>
-                    </select>
-
-                    <select>
-                        <option>Octubre 2026</option>
-                    </select>
-
-                </div>
-
-        </div>
-
-        <div class="task-item">
-
-            <div class="task-info">
-
-                <input type="checkbox">
-
-                <div>
-                    <h4>Consultas SQL</h4>
-                    <p>Base de Datos</p>
-                </div>
-
             </div>
 
-            <div class="task-actions">
+            <div class="tasks-right">
+                <div class="card">
+                    <h3>Crear o editar tarea</h3>
 
-                <a href="#">Editar</a>
-                <a href="#">Eliminar</a>
+                    <form>
+                        <input placeholder="Nombre">
 
+                        <textarea placeholder="Descripción"></textarea>
+
+                        <select>
+                            <option>Base de Datos</option>
+                        </select>
+
+                        <div class="double-field">
+                            <input type="date">
+                            <input type="time">
+                        </div>
+
+                        <div class="double-field">
+                            <select>
+                                <option>Alta</option>
+                            </select>
+
+                            <select>
+                                <option>En curso</option>
+                            </select>
+                        </div>
+
+                        <input placeholder="Recordatorio">
+
+                        <div class="form-buttons">
+                            <button type="button">Cancelar</button>
+                            <button type="submit" class="btn-primary">Guardar tarea</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-        </div>
-
-
-
-        <div class="card">
-
-    <h3>Crear o editar tarea</h3>
-
-    <form>
-
-        <input placeholder="Nombre">
-
-        <textarea
-         placeholder="Descripción">
-        </textarea>
-
-        <select>
-            <option>Base de Datos</option>
-        </select>
-
-        <div class="double-field">
-
-            <input type="date">
-
-            <input type="time">
-
-        </div>
-
-        <div class="double-field">
-
-            <select>
-                <option>Alta</option>
-            </select>
-
-            <select>
-                <option>En curso</option>
-            </select>
-
-        </div>
-
-        <input
-         placeholder="Recordatorio">
-
-                <div class="form-buttons">
-
-                    <button type="button">
-                        Cancelar
-                    </button>
-
-                    <button
-                    type="submit"
-                    class="btn-primary">
-
-                        Guardar tarea
-
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
+        </section>
 
     </main>
 
