@@ -378,3 +378,69 @@ form{
     font-weight:600;
     cursor:pointer;
 }
+
+/*Encabezado de lista, metadatos de tarea, acciones sin subrayado y resumen */
+.task-list-card{
+    margin-top:16px;
+}
+
+.list-header{
+    padding-bottom:12px;
+    margin-bottom:12px;
+    border-bottom:1px solid #e6eaf0;
+}
+
+.list-header h3{
+    font-size:15px;
+    color:#1f2937;
+}
+
+.task-meta{
+    display:flex;
+    gap:8px;
+    margin-top:6px;
+}
+
+.badge{
+    font-size:11px;
+    font-weight:600;
+    padding:3px 8px;
+    border-radius:999px;
+}
+
+.priority-high{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.status-progress{
+    background:#eef4ff;
+    color:#2563eb;
+}
+
+.task-actions{
+    display:flex;
+    gap:12px;
+}
+
+.task-actions a{
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+}
+
+.action-edit{
+    color:#2563eb;
+}
+
+.action-delete{
+    color:#dc2626;
+}
+
+.list-footer{
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid #e6eaf0;
+    font-size:12px;
+    color:#6b7280;
+}
