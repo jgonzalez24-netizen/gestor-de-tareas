@@ -57,21 +57,28 @@ nav a.active{
 
 .semester{
     margin-top:40px;
+    padding:14px;
     background:#f7f8fb;
     border-radius:10px;
-    padding:15px;
 }
 
 .semester h4{
-    margin-bottom:6px;
+    margin-bottom:5px;
+    font-size:14px;
+}
+
+.semester p,
+.semester span{
+    color:#8390a4;
+    font-size:13px;
 }
 
 .logout{
     margin-top:auto;
-    border:none;
     background:none;
+    border:none;
     text-align:left;
-    color:#5f6c81;
+    color:#687487;
     cursor:pointer;
 }
 

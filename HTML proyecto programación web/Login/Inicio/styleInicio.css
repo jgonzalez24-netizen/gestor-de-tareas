@@ -48,9 +48,20 @@ body{
 
 .semester{
     margin-top:40px;
-    background:#f8fafc;
-    padding:15px;
+    padding:14px;
+    background:#f7f8fb;
     border-radius:10px;
+}
+
+.semester h4{
+    margin-bottom:5px;
+    font-size:14px;
+}
+
+.semester p,
+.semester span{
+    color:#8390a4;
+    font-size:13px;
 }
 
 .logout{
