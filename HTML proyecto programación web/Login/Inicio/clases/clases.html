@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>EduTask</title>
+    <title>EduTask - Clases</title>
     <link rel="stylesheet" href="styleClases.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
         <nav>
             <a href="../inicio.html">Inicio</a>
-            <a class="active" href="#"> Clases</a>
+            <a class="active" href="#">Clases</a>
             <a href="../misTareas/misTareas.html">Mis tareas</a>
             <a href="../configuacion/configuracion.html">Configuración</a>
             <a href="../calendario/calendario.html">Calendario</a>
@@ -28,95 +28,147 @@
             <span>4 materias</span>
         </div>
 
-        <button class="logout">Cerrar sesión</button>
+        <a href="../../Login.html" class="logout">Cerrar sesión</a>
     </aside>
 
     <main class="main-content">
 
         <header class="topbar">
             <span>Miércoles 7 de octubre de 2026</span>
-            <span>Estudiante: Jesús Alberto</span>
+            <span><strong>Estudiante:</strong> Jesús Alberto</span>
         </header>
 
         <section class="page-header">
             <div>
-                <h1>Mis tareas</h1>
-                <p>8 tareas registradas</p>
+                <h1>Clases y materias</h1>
+                <p>4 materias registradas · Semestre Agosto - Diciembre 2026</p>
             </div>
 
-            <button class="btn-primary">
-                Agregar tarea
+            <button type="button" class="btn-primary">
+                + Agregar materia
             </button>
         </section>
 
         <section class="tasks-grid">
 
             <div class="task-card">
-                <h3>Consultas SQL</h3>
-
-                <p>Materia: Base de Datos</p>
-
-                <span class="priority alta">
-                    Prioridad Alta
-                </span>
-
-                <p>Entrega: 07 Oct 2026</p>
+                <div class="subject-header">
+                    <h3>Base de Datos</h3>
+                    <span class="badge">2 tareas</span>
+                </div>
+                <p><strong>Docente:</strong> Ing. Carlos Mendoza</p>
+                <p><strong>Horario:</strong> Lun y Mié · 08:00 - 10:00</p>
+                <p><strong>Aula:</strong> Laboratorio 2</p>
 
                 <div class="actions">
-                    <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Eliminar</button>
                 </div>
             </div>
 
             <div class="task-card">
-                <h3>Subnetting</h3>
-
-                <p>Materia: Redes</p>
-
-                <span class="priority media">
-                    Prioridad Media
-                </span>
-
-                <p>Entrega: 09 Oct 2026</p>
+                <div class="subject-header">
+                    <h3>Redes</h3>
+                    <span class="badge">2 tareas</span>
+                </div>
+                <p><strong>Docente:</strong> M.C. Laura Navarro</p>
+                <p><strong>Horario:</strong> Mar y Jue · 10:00 - 12:00</p>
+                <p><strong>Aula:</strong> Aula B-14</p>
 
                 <div class="actions">
-                    <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <div class="subject-header">
+                    <h3>Programación</h3>
+                    <span class="badge">2 tareas</span>
+                </div>
+                <p><strong>Docente:</strong> Ing. Roberto Silva</p>
+                <p><strong>Horario:</strong> Lun y Vie · 10:00 - 12:00</p>
+                <p><strong>Aula:</strong> Laboratorio 4</p>
+
+                <div class="actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <div class="subject-header">
+                    <h3>Autómatas</h3>
+                    <span class="badge">2 tareas</span>
+                </div>
+                <p><strong>Docente:</strong> Dra. Patricia Morales</p>
+                <p><strong>Horario:</strong> Mié y Vie · 12:00 - 14:00</p>
+                <p><strong>Aula:</strong> Aula A-08</p>
+
+                <div class="actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Eliminar</button>
                 </div>
             </div>
 
         </section>
 
-
         <section class="card weekly-summary">
 
-            <h3>Próximas entregas</h3>
+            <h3>Horario semanal</h3>
 
             <div class="week-grid">
 
                 <div class="day">
                     <h4>Lunes</h4>
-                    <p>1 tarea</p>
+                    <div class="schedule-item">
+                        <span class="schedule-time">08:00 - 10:00</span>
+                        <span class="schedule-subject">Base de Datos</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="schedule-time">10:00 - 12:00</span>
+                        <span class="schedule-subject">Programación</span>
+                    </div>
                 </div>
 
                 <div class="day">
                     <h4>Martes</h4>
-                    <p>2 tareas</p>
+                    <div class="schedule-item">
+                        <span class="schedule-time">10:00 - 12:00</span>
+                        <span class="schedule-subject">Redes</span>
+                    </div>
                 </div>
 
                 <div class="day">
                     <h4>Miércoles</h4>
-                    <p>0 tareas</p>
+                    <div class="schedule-item">
+                        <span class="schedule-time">08:00 - 10:00</span>
+                        <span class="schedule-subject">Base de Datos</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="schedule-time">12:00 - 14:00</span>
+                        <span class="schedule-subject">Autómatas</span>
+                    </div>
                 </div>
 
                 <div class="day">
                     <h4>Jueves</h4>
-                    <p>3 tareas</p>
+                    <div class="schedule-item">
+                        <span class="schedule-time">10:00 - 12:00</span>
+                        <span class="schedule-subject">Redes</span>
+                    </div>
                 </div>
 
                 <div class="day">
                     <h4>Viernes</h4>
-                    <p>1 tarea</p>
+                    <div class="schedule-item">
+                        <span class="schedule-time">10:00 - 12:00</span>
+                        <span class="schedule-subject">Programación</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="schedule-time">12:00 - 14:00</span>
+                        <span class="schedule-subject">Autómatas</span>
+                    </div>
                 </div>
 
             </div>
@@ -125,10 +177,7 @@
 
     </main>
 
+</div>
 
-    
-
-    
 </body>
-
 </html>

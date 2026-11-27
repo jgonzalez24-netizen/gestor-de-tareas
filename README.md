@@ -1,41 +1,34 @@
 # EduTask — Sistema Web de Gestión de Tareas y Planificación Académica
 
-Aplicación web diseñada para ayudar a estudiantes a organizar sus materias, horarios de clase, tareas pendientes, recordatorios y progreso académico en un solo lugar.
+Aplicación web para la organización de materias, horarios de clase, tareas y recordatorios académicos.
+
+* **Sitio desplegado en línea:** [http://tuc4s.great-site.net/](http://tuc4s.great-site.net/)
 
 ## Tecnologías Utilizadas
 * **Frontend:** HTML5, CSS3, JavaScript
-* **Backend:** PHP
-* **Base de Datos:** MySQL (`utf8mb4_unicode_ci`)
-* **Entorno Local:** XAMPP (Apache + MySQL)
+* **Backend:** PHP 8+ (consultas preparadas `mysqli` y hashing seguro con `password_hash` / `password_verify`)
+* **Base de Datos:** MySQL / MariaDB (`utf8mb4`)
+* **Despliegue:** InfinityFree
 
----
+## Estructura de la Base de Datos (`edutask`)
 
-## Modelo Entidad-Relación (MER)
+El modelo relacional está compuesto por **7 tablas** con integridad referencial (`ON DELETE CASCADE`):
 
-El diseño de la base de datos contempla las entidades `usuario`, `preferencia_usuario`, `materia`, `horario_clase`, `tarea` y `recordatorio`.
+1. **`usuario`**: Almacena los datos de acceso y perfil del estudiante (`contrasena` protegida mediante hash unidireccional).
+2. **`preferencia_usuario`**: Configuración individual de notificaciones y tiempo de anticipación predeterminado (relación 1:1 con `usuario`).
+3. **`recuperacion_contrasena`**: Gestión de tokens temporales de un solo uso (`token`, `fecha_expiracion`, `usado`) para el restablecimiento de contraseñas.
+4. **`materia`**: Asignaturas registradas por cada usuario, con profesor, color identificador y descripción.
+5. **`horario_clase`**: Bloques de día, hora de inicio/fin y aula asociados a cada materia.
+6. **`tarea`**: Actividades académicas vinculadas al usuario y opcionalmente a una materia, con fecha/hora de entrega, prioridad y estado.
+7. **`recordatorio`**: Alertas configuradas por tarea según el tiempo de anticipación (minutos, horas o días antes de la entrega).
 
-![Modelo Entidad-Relación EduTask](Edutask.png)
+### Diagrama Entidad-Relación
 
----
+![Diagrama Entidad-Relación de EduTask](DiagramaEdutask.png)
 
-## Instalación y Configuración Local
+## Credenciales de Acceso (Usuario de Prueba)
 
-1. Clonar o descargar este repositorio dentro de la carpeta `htdocs` de XAMPP con el nombre `tareas` (`C:\xampp\htdocs\tareas`).
-2. Iniciar los servicios de **Apache** y **MySQL** en el panel de control de XAMPP.
-3. Abrir **MySQL Workbench** y conectarse al servidor local (`127.0.0.1` / `localhost`).
-4. Abrir y ejecutar el archivo `Edutask.sql` para crear la base de datos, las tablas y el usuario de prueba.
-5. Abrir el archivo `HTML proyecto programación web/Login/conexion.php` y verificar que los datos de conexión coincidan con tu servidor local (en XAMPP por defecto el usuario es `root` y la contraseña va vacía `""`).
-6. Abrir el navegador e ingresar directamente al inicio de sesión en:  
-   `http://localhost/tareas/HTML%20proyecto%20programaci%C3%B3n%20web/Login/Login.html`
-7. Iniciar sesión con el usuario de prueba:
-   * **Correo:** `jesus@gmail.com`
-   * **Contraseña:** `12345`
+Para probar el funcionamiento del sistema directamente en el sitio desplegado sin necesidad de realizar un registro previo, utiliza la siguiente cuenta precargada en la base de datos:
 
----
-
-## Módulos Principales del Sistema
-* **Autenticación:** Inicio y cierre de sesión validado contra MySQL.
-* **Dashboard:** Resumen general de actividades y próximos vencimientos.
-* **Tareas y Recordatorios:** Gestión de entregas con prioridad, estado y alertas configurables.
-* **Materias y Horarios:** Registro de asignaturas, profesores, colores identificadores y horarios de clase.
-* **Calendario:** Visualización de entregas por semana y mes actual.
+* **Correo electrónico:** `jesus@gmail.com`
+* **Contraseña:** `12345`

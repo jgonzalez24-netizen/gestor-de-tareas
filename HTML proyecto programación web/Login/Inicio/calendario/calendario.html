@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EduTask - Calendario</title>
 <link rel="stylesheet" href="styleCalendario.css">
+</head>
 
 <body>
 
@@ -18,17 +18,15 @@
             <h2>EduTask</h2>
             <span>Planificación académica</span>
         </div>
-        
-        <nav>
 
+        <nav>
             <a href="../inicio.html">Inicio</a>
-            <a href="../clases/clases.html"> Clases</a>
+            <a href="../clases/clases.html">Clases</a>
             <a href="../misTareas/misTareas.html">Mis tareas</a>
             <a href="../configuacion/configuracion.html">Configuración</a>
-            <a class="active" href="#"">Calendario</a>
+            <a class="active" href="#">Calendario</a>
             <a href="../progresoAcademico/progresoAcademico.html">Progreso académico</a>
         </nav>
-            
 
         <div class="semester">
             <h4>Semestre actual</h4>
@@ -36,9 +34,7 @@
             <span>4 materias</span>
         </div>
 
-        <button class="logout">
-            Cerrar sesión
-        </button>
+        <a href="../../Login.html" class="logout">Cerrar sesión</a>
 
     </aside>
 
@@ -61,9 +57,9 @@
         <section class="calendar-controls">
 
             <div class="left">
-                <button class="circle">&lt;</button>
+                <button class="circle"><</button>
                 <h2>Octubre de 2026</h2>
-                <button class="circle">&gt;</button>
+                <button class="circle">></button>
 
                 <button class="today">
                     Hoy
@@ -114,90 +110,130 @@
             <div class="weekday">Domingo</div>
 
             <!-- Semana 1 -->
-
             <div class="day muted">28</div>
             <div class="day muted">29</div>
             <div class="day muted">30</div>
 
             <div class="day">
                 <span class="number">1</span>
-
-                <div class="task">
-                    Alfabetos y lenguajes
+                <div class="task task-completed">
+                    <span class="task-title">Alfabetos y lenguajes</span>
+                    <span class="task-meta">23:59 · Completada</span>
                 </div>
             </div>
 
             <div class="day">
                 <span class="number">2</span>
-
-                <div class="task">
-                    Práctica de funciones
+                <div class="task task-completed">
+                    <span class="task-title">Práctica de funciones</span>
+                    <span class="task-meta">23:59 · Completada</span>
                 </div>
             </div>
 
             <div class="day">
                 <span class="number">3</span>
+                <div class="no-tasks">Sin entregas</div>
             </div>
 
             <div class="day">
                 <span class="number">4</span>
+                <div class="no-tasks">Sin entregas</div>
             </div>
 
             <!-- Semana 2 -->
-
             <div class="day">
                 <span class="number">5</span>
-
-                <div class="task">
-                    Modelo entidad-relación
+                <div class="task task-completed">
+                    <span class="task-title">Modelo entidad-relación</span>
+                    <span class="task-meta">23:59 · Completada</span>
                 </div>
             </div>
 
             <div class="day">
                 <span class="number">6</span>
-
-                <div class="task">
-                    Modelo OSI
+                <div class="task task-completed">
+                    <span class="task-title">Modelo OSI</span>
+                    <span class="task-meta">23:59 · Completada</span>
                 </div>
             </div>
 
             <div class="day active-day">
-                <span class="number">7</span>
-
-                <div class="task">
-                    Consultas SQL
+                <div class="day-header">
+                    <span class="number">7</span>
+                    <span class="today-badge">Hoy</span>
+                </div>
+                <div class="task task-progress">
+                    <span class="task-title">Consultas SQL</span>
+                    <span class="task-meta">23:59 · En curso</span>
                 </div>
             </div>
 
-            <div class="day"><span class="number">8</span></div>
-            <div class="day"><span class="number">9</span></div>
-            <div class="day"><span class="number">10</span></div>
-            <div class="day"><span class="number">11</span></div>
+            <div class="day">
+                <span class="number">8</span>
+                <div class="no-tasks">Sin entregas</div>
+            </div>
 
-            <!-- resto del mes -->
+            <div class="day">
+                <span class="number">9</span>
+                <div class="task task-pending">
+                    <span class="task-title">Práctica de subnetting</span>
+                    <span class="task-meta">23:59 · Pendiente</span>
+                </div>
+            </div>
 
-            <div class="day"><span class="number">12</span></div>
-            <div class="day"><span class="number">13</span></div>
-            <div class="day"><span class="number">14</span></div>
-            <div class="day"><span class="number">15</span></div>
-            <div class="day"><span class="number">16</span></div>
-            <div class="day"><span class="number">17</span></div>
-            <div class="day"><span class="number">18</span></div>
+            <div class="day">
+                <span class="number">10</span>
+                <div class="no-tasks">Sin entregas</div>
+            </div>
 
-            <div class="day"><span class="number">19</span></div>
-            <div class="day"><span class="number">20</span></div>
-            <div class="day"><span class="number">21</span></div>
-            <div class="day"><span class="number">22</span></div>
-            <div class="day"><span class="number">23</span></div>
-            <div class="day"><span class="number">24</span></div>
-            <div class="day"><span class="number">25</span></div>
+            <div class="day">
+                <span class="number">11</span>
+                <div class="no-tasks">Sin entregas</div>
+            </div>
 
-            <div class="day"><span class="number">26</span></div>
-            <div class="day"><span class="number">27</span></div>
-            <div class="day"><span class="number">28</span></div>
-            <div class="day"><span class="number">29</span></div>
-            <div class="day"><span class="number">30</span></div>
-            <div class="day"><span class="number">31</span></div>
+            <!-- Semana 3 -->
+            <div class="day">
+                <span class="number">12</span>
+                <div class="task task-pending">
+                    <span class="task-title">Ejercicios de recursión</span>
+                    <span class="task-meta">23:59 · Pendiente</span>
+                </div>
+            </div>
+
+            <div class="day">
+                <span class="number">13</span>
+                <div class="no-tasks">Sin entregas</div>
+            </div>
+
+            <div class="day">
+                <span class="number">14</span>
+                <div class="task task-pending">
+                    <span class="task-title">Autómatas finitos</span>
+                    <span class="task-meta">23:59 · Pendiente</span>
+                </div>
+            </div>
+
+            <div class="day"><span class="number">15</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">16</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">17</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">18</span><div class="no-tasks">Sin entregas</div></div>
+
+            <!-- Semana 4 -->
+            <div class="day"><span class="number">19</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">20</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">21</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">22</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">23</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">24</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">25</span><div class="no-tasks">Sin entregas</div></div>
+
+            <!-- Semana 5 -->
+            <div class="day"><span class="number">26</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">27</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">28</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">29</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">30</span><div class="no-tasks">Sin entregas</div></div>
+            <div class="day"><span class="number">31</span><div class="no-tasks">Sin entregas</div></div>
             <div class="day muted">1</div>
 
         </section>
@@ -209,7 +245,7 @@
                 <strong>Hoy: Consultas SQL - Base de Datos</strong>
                 <p>
                     Próximas entregas:
-                    08 oct · Práctica de subnetting |
+                    09 oct · Práctica de subnetting |
                     12 oct · Ejercicios de recursión |
                     14 oct · Autómatas finitos
                 </p>

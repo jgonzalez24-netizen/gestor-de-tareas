@@ -21,6 +21,8 @@ body{
     background:white;
     padding:25px;
     border-right:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
 }
 
 .logo{
@@ -71,6 +73,11 @@ body{
     text-align:left;
     color:#687487;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.logout:hover{
+    background:#e2e8f0;
 }
 
 /* CONTENT */
